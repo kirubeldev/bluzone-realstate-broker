@@ -1,10 +1,10 @@
 import React from 'react'
-import { BookingTable } from './bookingpage'
+import BookingPage, { BookingTable } from './bookingpage'
 
 const Page = () => {
   return (
     <div className='mt-[40px]'>
-        <BookingTable/>
+        <BookingPage/>
     </div>
   )
 }

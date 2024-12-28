@@ -11,6 +11,11 @@ import {
   FiUsers,
 } from "react-icons/fi";
 
+import { MdDashboard } from "react-icons/md";
+import { BsHouse } from "react-icons/bs";
+import { TbBrandBooking } from "react-icons/tb";
+import { GrContact } from "react-icons/gr";
+
 export const RouteSelect = () => {
   const pathname = usePathname(); // Get the current path
 
@@ -18,7 +23,7 @@ export const RouteSelect = () => {
     <div className="space-y-1">
       <Link href={"/"}>
         <Route
-          Icon={FiHome}
+          Icon={MdDashboard}
           selected={pathname === "/"}
           title="Dashboard"
         />
@@ -34,7 +39,7 @@ export const RouteSelect = () => {
 
       <Link href={"/realstates"}>
         <Route
-          Icon={FiPaperclip}
+          Icon={BsHouse}
           selected={pathname === "/realstates"}
           title="Realstate"
         />
@@ -42,7 +47,7 @@ export const RouteSelect = () => {
 
       <Link href={"/booking"}>
         <Route
-          Icon={FiLink}
+          Icon={TbBrandBooking}
           selected={pathname === "/booking"}
           title="Booking"
         />
@@ -50,7 +55,7 @@ export const RouteSelect = () => {
 
       <Link href={"/contact"}>
         <Route
-          Icon={FiDollarSign}
+          Icon={GrContact}
           selected={pathname === "/contact"}
           title="contact"
         />
@@ -62,7 +67,7 @@ export const RouteSelect = () => {
 const Route = ({ selected, Icon, title }) => {
   return (
     <button
-      className={`flex items-center justify-start gap-2 w-full rounded px-2 py-1.5 text-sm transition-[box-shadow,_background-color,_color] ${
+      className={`flex items-center justify-start gap-2 w-full rounded px-2 py-1.5 text-md transition-[box-shadow,_background-color,_color] ${
         selected
           ? "bg-white text-stone-950 shadow"
           : "hover:bg-stone-200 bg-transparent text-stone-500 shadow-none"

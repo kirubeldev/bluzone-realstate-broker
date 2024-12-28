@@ -19,7 +19,7 @@ const predefinedData = [
 
 export const PatternTable = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const rowsPerPage = 10;
+  const rowsPerPage = 8;
 
   const totalPages = Math.ceil(predefinedData.length / rowsPerPage);
   const startIndex = (currentPage - 1) * rowsPerPage;
